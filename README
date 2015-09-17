@@ -6,7 +6,7 @@ This process takes output from BUY_PROCESS/BUY_PROC_ACTION, along with some embe
     a.  load process.cleaned into a mySql table = buy_process
 
 
-Change
+Change again
 
 like logic, to include ric d
 static rules
