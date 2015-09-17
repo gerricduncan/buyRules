@@ -7,9 +7,18 @@
 //
 
 #include <iostream>
+#include <fstream>
+#include <string>
+#include "dbConnect.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    db myData = db("Localhost","root","","test");
+    myData.createTables();
+    myData.loadData();
+    myData.loadRules();
+    myData.combineRules();
+
+    myData.insertRules();
+
     return 0;
 }

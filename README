@@ -1,0 +1,36 @@
+This process takes output from BUY_PROCESS/BUY_PROC_ACTION, along with some embedded code, and writes a series of rules.
+
+1.  Query these tables with buyrules.jcl; output = <HLQ>.PROCESS
+2.  Download and clean previous output with getCleanBuy.sh; output = process.cleaned
+3.  Execute main.cpp, which does the following:
+    a.  load process.cleaned into a mySql table = buy_process
+
+
+
+
+like logic, to include ric d
+static rules
+ricb rules
+consider sequence - resolve conflicts
+deconstructor remove connection
+
+124240         WHEN ALERT-NAME = 'BUY20A20'
+124250               OR ALERT-NAME = 'BUY30A24'
+124260****>           AND MEDS-STATUS IS NOT DENIED OR CLOSED            0089
+124270              IF TM-MEDS-MEMBER-STATUS = 'C'                       0033
+124280                    OR TM-MEDS-MEMBER-STATUS = 'D'                 0033
+124290                  SET ALERT-NOT-FOUND TO TRUE                      0033
+124300              ELSE                                                 0033
+124310                  MOVE '223' TO WS-ALERT-ID
+124320                  SET CENT-UNIT-SUPER TO TRUE
+124330              END-IF
+
+125080         WHEN ALERT-NAME = 'BUY30A36'
+125090****>           AND MEDS-STATUS IS NOT DENIED OR CLOSED            0033
+125100              IF TM-MEDS-MEMBER-STATUS = 'C'                       0033
+125110                    OR TM-MEDS-MEMBER-STATUS = 'D'                 0033
+125120                  SET ALERT-NOT-FOUND TO TRUE                      0089
+125130              ELSE                                                 0033
+125140                  MOVE '201' TO WS-ALERT-ID
+125150                  SET CENT-UNIT-SUPER TO TRUE
+125160              END-IF

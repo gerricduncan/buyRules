@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29204BA61B6675510002CF95 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29204BA51B6675510002CF95 /* main.cpp */; };
+		2941A8D71B97EF850019A9AF /* dbConnect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2941A8D61B97EF850019A9AF /* dbConnect.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,13 @@
 /* Begin PBXFileReference section */
 		29204BA21B6675510002CF95 /* rulesBuy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = rulesBuy; sourceTree = BUILT_PRODUCTS_DIR; };
 		29204BA51B6675510002CF95 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		29204BAD1B6675F90002CF95 /* dbConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dbConnect.h; sourceTree = "<group>"; };
+		293C60531B8772B5007FEEFF /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README; path = ../README; sourceTree = "<group>"; };
+		293C60541B877476007FEEFF /* buyrules.jcl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = buyrules.jcl; path = ../../../../buy/buyrules.jcl; sourceTree = "<group>"; };
+		293C60581B87AB94007FEEFF /* process.cleaned */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = process.cleaned; path = ../../../../buy/process.cleaned; sourceTree = "<group>"; };
+		293C60591B87B6D1007FEEFF /* getCleanBuy.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = getCleanBuy.sh; path = ../../../../buy/getCleanBuy.sh; sourceTree = "<group>"; };
+		2941A8D61B97EF850019A9AF /* dbConnect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dbConnect.cpp; path = ../dbConnect.cpp; sourceTree = "<group>"; };
+		29EE5FD01B8CF0E3006F9D84 /* actions */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = actions; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +65,14 @@
 		29204BA41B6675510002CF95 /* rulesBuy */ = {
 			isa = PBXGroup;
 			children = (
+				29EE5FD01B8CF0E3006F9D84 /* actions */,
+				293C60591B87B6D1007FEEFF /* getCleanBuy.sh */,
+				293C60581B87AB94007FEEFF /* process.cleaned */,
+				293C60541B877476007FEEFF /* buyrules.jcl */,
+				293C60531B8772B5007FEEFF /* README */,
 				29204BA51B6675510002CF95 /* main.cpp */,
+				2941A8D61B97EF850019A9AF /* dbConnect.cpp */,
+				29204BAD1B6675F90002CF95 /* dbConnect.h */,
 			);
 			path = rulesBuy;
 			sourceTree = "<group>";
@@ -118,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2941A8D71B97EF850019A9AF /* dbConnect.cpp in Sources */,
 				29204BA61B6675510002CF95 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +221,13 @@
 		29204BAA1B6675510002CF95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = "-lmysqlcppconn";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +235,13 @@
 		29204BAB1B6675510002CF95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = "-lmysqlcppconn";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -235,6 +265,7 @@
 				29204BAB1B6675510002CF95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
