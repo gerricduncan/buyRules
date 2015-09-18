@@ -6,8 +6,6 @@ This process takes output from BUY_PROCESS/BUY_PROC_ACTION, along with some embe
     a.  load process.cleaned into a mySql table = buy_process
 
 
-Change again 2
-
 like logic, to include ric d
 static rules
 ricb rules
@@ -34,3 +32,7 @@ deconstructor remove connection
 125140                  MOVE '201' TO WS-ALERT-ID
 125150                  SET CENT-UNIT-SUPER TO TRUE
 125160              END-IF
+
+output
+
+

@@ -32,6 +32,8 @@
 		293C60581B87AB94007FEEFF /* process.cleaned */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = process.cleaned; path = ../../../../buy/process.cleaned; sourceTree = "<group>"; };
 		293C60591B87B6D1007FEEFF /* getCleanBuy.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = getCleanBuy.sh; path = ../../../../buy/getCleanBuy.sh; sourceTree = "<group>"; };
 		2941A8D61B97EF850019A9AF /* dbConnect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dbConnect.cpp; path = ../dbConnect.cpp; sourceTree = "<group>"; };
+		29C7621B1BAAF96000AE1181 /* conditions */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = conditions; path = ../../../../buy/conditions; sourceTree = "<group>"; };
+		29C762341BAC6EB200AE1181 /* LP Definitions Algorithms.docx */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LP Definitions Algorithms.docx"; path = "../../../../Documents/LP/LP Definitions Algorithms.docx"; sourceTree = "<group>"; };
 		29EE5FD01B8CF0E3006F9D84 /* actions */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = actions; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,7 +67,9 @@
 		29204BA41B6675510002CF95 /* rulesBuy */ = {
 			isa = PBXGroup;
 			children = (
+				29C762341BAC6EB200AE1181 /* LP Definitions Algorithms.docx */,
 				29EE5FD01B8CF0E3006F9D84 /* actions */,
+				29C7621B1BAAF96000AE1181 /* conditions */,
 				293C60591B87B6D1007FEEFF /* getCleanBuy.sh */,
 				293C60581B87AB94007FEEFF /* process.cleaned */,
 				293C60541B877476007FEEFF /* buyrules.jcl */,
